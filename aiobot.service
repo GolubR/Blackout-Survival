@@ -1,0 +1,14 @@
+[Unit]
+Description = Telegram Bot
+After = network.target
+
+[Service]
+User = golubr
+Group = root
+
+WorkingDirectory = /home/golubr/Blackout-Survival/
+Environment = "PYTHONPATH=/home/golubr/Blackout-Survival/"
+ExecStart = /home/golubr/Blackout-Survival/.venv/bin/python /home/golubr/Blackout-Survival/main.py
+
+[Install]
+WantedBy = multi-user.target
